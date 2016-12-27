@@ -169,6 +169,7 @@
     <Compile Include="Migrations\201612261337572_InitialModel.Designer.cs">
       <DependentUpon>201612261337572_InitialModel.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201612271231485_AddIsSubscribedToCustomer.cs" />
     <Compile Include="Migrations\201612271231485_AddIsSubscribedToCustomer.Designer.cs">
       <DependentUpon>201612271231485_AddIsSubscribedToCustomer.cs</DependentUpon>
@@ -177,11 +178,16 @@
     <Compile Include="Migrations\201612271240359_AddMembershipType.Designer.cs">
       <DependentUpon>201612271240359_AddMembershipType.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 722a4825c6695d97bd633bb29ae1af04d8033a01
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\MembershipType.cs" />
+=======
+>>>>>>> 722a4825c6695d97bd633bb29ae1af04d8033a01
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -255,12 +261,15 @@
     <EmbeddedResource Include="Migrations\201612261337572_InitialModel.resx">
       <DependentUpon>201612261337572_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201612271231485_AddIsSubscribedToCustomer.resx">
       <DependentUpon>201612271231485_AddIsSubscribedToCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612271240359_AddMembershipType.resx">
       <DependentUpon>201612271240359_AddMembershipType.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 722a4825c6695d97bd633bb29ae1af04d8033a01
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
