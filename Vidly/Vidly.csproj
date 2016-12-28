@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201612281252423_AddCustomer.Designer.cs">
       <DependentUpon>201612281252423_AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612281503588_AddMoviesToIdentity.cs" />
+    <Compile Include="Migrations\201612281503588_AddMoviesToIdentity.Designer.cs">
+      <DependentUpon>201612281503588_AddMoviesToIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -302,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612281252423_AddCustomer.resx">
       <DependentUpon>201612281252423_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612281503588_AddMoviesToIdentity.resx">
+      <DependentUpon>201612281503588_AddMoviesToIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
