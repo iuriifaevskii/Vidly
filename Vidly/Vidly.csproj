@@ -205,9 +205,22 @@
     <Compile Include="Migrations\201612281503588_AddMoviesToIdentity.Designer.cs">
       <DependentUpon>201612281503588_AddMoviesToIdentity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612281557161_AddGanreTable.cs" />
+    <Compile Include="Migrations\201612281557161_AddGanreTable.Designer.cs">
+      <DependentUpon>201612281557161_AddGanreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612281601246_AddGanreInsert.cs" />
+    <Compile Include="Migrations\201612281601246_AddGanreInsert.Designer.cs">
+      <DependentUpon>201612281601246_AddGanreInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612290945586_InsertMovies.cs" />
+    <Compile Include="Migrations\201612290945586_InsertMovies.Designer.cs">
+      <DependentUpon>201612290945586_InsertMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Ganre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -309,6 +322,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612281503588_AddMoviesToIdentity.resx">
       <DependentUpon>201612281503588_AddMoviesToIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612281557161_AddGanreTable.resx">
+      <DependentUpon>201612281557161_AddGanreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612281601246_AddGanreInsert.resx">
+      <DependentUpon>201612281601246_AddGanreInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612290945586_InsertMovies.resx">
+      <DependentUpon>201612290945586_InsertMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
