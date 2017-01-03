@@ -18,12 +18,61 @@ namespace Vidly.Controllers
         {
             _context = new ApplicationDbContext();
         }
-        public ActionResult Index()
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+        public ActionResult New()
+        {
+            var ganres = _context.Ganre.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                Ganres = ganres
+            };
+            return View("MovieForm", viewModel);
+        }
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.GanreId = movie.GanreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+            }
+
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Movies");
+        }
+        public ViewResult Index()
         {
             var movies = _context.Movies.Include(m => m.Ganre).ToList();
-            return View(movies);    
+            return View(movies);
         }
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault( m => m.Id == id);
+ 
+            if(movie==null)
+                return HttpNotFound();
 
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Ganres = _context.Ganre.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+        }
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Ganre).SingleOrDefault(m => m.Id == id);
@@ -32,7 +81,7 @@ namespace Vidly.Controllers
             {
                 return HttpNotFound();
             }
-
+            
             return View(movie);
         }
 
@@ -57,6 +106,6 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-
+        
 	}
 }

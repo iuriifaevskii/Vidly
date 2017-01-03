@@ -9,11 +9,11 @@ namespace Vidly.Models
     public class Ganre
     {
         public int Id { get; set; }
+        
         [Required]
-        [StringLength(255)]
+        [StringLength(253)]
         public string Name { get; set; }
-        public DateTime? ReleaseDate { get; set; }
-        public DateTime? DateAdded { get; set; }
-        public int Number { get; set; }
+        
+
     }
 }

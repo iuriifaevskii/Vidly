@@ -3,7 +3,10 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<h1>Movies</h1>
+<p>
+    @Html.ActionLink("NEW MOVIE", "New", "Movies", new { @class = "btn btn-primary" })
+</p>
 @if (!Model.Any())
 {
     <p>We don't have any customers yet.</p>
@@ -14,6 +17,7 @@ else
     <thead>
         <tr>
             <th>Movies</th>
+            <th>Ganre</th>
         </tr>
     </thead>
     <tbody>
@@ -21,8 +25,11 @@ else
         { 
         <tr>
             <td>
-                @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)
+                @Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)
             </td>   
+            <td>
+                @movie.Ganre.Name
+            </td>
         </tr>
         }
     </tbody>

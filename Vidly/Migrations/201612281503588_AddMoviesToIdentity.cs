@@ -13,6 +13,9 @@ namespace Vidly.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                        ReleaseDate = c.DateTime(),
+                        DateAdded = c.DateTime(),
+                        Number = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

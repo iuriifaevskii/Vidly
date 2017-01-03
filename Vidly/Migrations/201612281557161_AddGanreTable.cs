@@ -13,22 +13,20 @@ namespace Vidly.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 255),
-                        ReleaseDate = c.DateTime(),
-                        DateAdded = c.DateTime(),
-                        Number = c.Int(nullable: false),
+
                     })
                 .PrimaryKey(t => t.Id);
             
-            AddColumn("dbo.Movies", "Ganre_Id", c => c.Int());
-            CreateIndex("dbo.Movies", "Ganre_Id");
-            AddForeignKey("dbo.Movies", "Ganre_Id", "dbo.Ganres", "Id");
+            AddColumn("dbo.Movies", "GanreId", c => c.Int());
+            CreateIndex("dbo.Movies", "GanreId");
+            AddForeignKey("dbo.Movies", "GanreId", "dbo.Ganres", "Id", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "Ganre_Id", "dbo.Ganres");
-            DropIndex("dbo.Movies", new[] { "Ganre_Id" });
-            DropColumn("dbo.Movies", "Ganre_Id");
+            DropForeignKey("dbo.Movies", "GanreId", "dbo.Ganres");
+            DropIndex("dbo.Movies", new[] { "GanreId" });
+            DropColumn("dbo.Movies", "GanreId");
             DropTable("dbo.Ganres");
         }
     }
