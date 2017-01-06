@@ -17,6 +17,8 @@ namespace Vidly.Dtos
         [Required]
         public int GanreId { get; set; }
 
+        public GanreDto ganre { get; set; }
+
         public DateTime? ReleaseDate { get; set; }
 
         public DateTime? DateAdded { get; set; }
